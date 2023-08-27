@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/v1/register")
+@RequestMapping("register")
 public class RegistrationController {
 
     private final UserService userService;
@@ -27,9 +27,11 @@ public class RegistrationController {
         return "Success! Please check your email to complete registration";
     }
 
+
+
      public String applicationUrl(HttpServletRequest request){
         return "http://"+request.getServerName()+":"+request.getServerPort()+request.getContextPath();
-
      }
+
 
 }
